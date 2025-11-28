@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" alignment="CENTER" prefHeight="618.0" prefWidth="1125.0" spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.motorcontrol.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Motor Controller">
+         <font>
+            <Font name=".VnVogue Medium" size="38.0" />
+         </font></Label>
+      <HBox alignment="CENTER" layoutX="30.0" layoutY="150.0" spacing="70.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="a" BorderPane.alignment="CENTER" />
+               </left>
+               <top>
+                  <Button fx:id="ascend" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="w" BorderPane.alignment="CENTER" />
+               </top>
+               <right>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="d" BorderPane.alignment="CENTER" />
+               </right>
+               <bottom>
+                  <Button fx:id="descend" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="s" BorderPane.alignment="CENTER" />
+               </bottom>
+               <center>
+                  <Button mnemonicParsing="false" onAction="#stop" prefHeight="50.0" prefWidth="50.0" text="stop" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <HBox fx:id="joy" alignment="CENTER" spacing="50.0" />
+         </children>
+      </HBox>
+      <Slider fx:id="speed" majorTickUnit="10.0" max="2000.0" min="1000.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="motor1" blockIncrement="1.0" majorTickUnit="50.0" max="1400.0" min="1000.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1000.0" />
+      <Slider fx:id="motor2" blockIncrement="1.0" layoutX="30.0" layoutY="132.0" majorTickUnit="50.0" max="1400.0" min="1000.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1000.0" />
+      <Slider fx:id="motor3" blockIncrement="1.0" layoutX="30.0" layoutY="161.0" majorTickUnit="50.0" max="1400.0" min="1000.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1000.0" />
+      <Slider fx:id="motor4" blockIncrement="1.0" layoutX="30.0" layoutY="190.0" majorTickUnit="50.0" max="1400.0" min="1000.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1000.0" />
+   </children>
+</VBox>
